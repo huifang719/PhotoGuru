@@ -17,3 +17,7 @@ end
 def find_user_by_id(id)
     run_sql("SELECT * FROM users WHERE id = $1",[id])[0]
 end 
+
+def add_to_email_list(first_name,last_name,email)
+    run_sql("INSERT INTO email_list(first_name, last_name, email) VALUES($1, $2, $3)", [first_name, last_name, email])
+end
