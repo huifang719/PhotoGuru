@@ -1,0 +1,36 @@
+<% if logged_in? %>
+<div class="welcome_container"> 
+    <div class="inline">
+        <h3>Welcome back, <%= current_user['first_name'] %></h3>
+        <form action="">
+            <select name="" id="">
+                <option value="">Choose your photography level</option>
+                <option value="">Beginner</option>
+                <option value="">Intermediate</option>
+                <option value="">Pro</option>  
+            </select>
+            <button>Submit</button>
+        </form>
+
+        <form  action="/sessions" method="POST">
+            <input type="hidden" name="_method" value="delete">
+            <button>Logout</button>
+        </form>
+    </div><br>
+    <div class="tips"><p id="log"></p></div>
+</div>
+
+    
+
+<% else %> 
+<div class="welcome_container"> 
+    <h3>Welcome,Guest!</h3>
+    <h4>Join our thriving photography Community</h4>
+    <li>Online photography tutorials</li>
+    <li>Community support and feedback</li>
+    <li>Photography Competitions</li>
+    <br><br>
+    <a href="/users/new">Join PhotoGuru</a>  
+    <P>Already a member? <a href="/sessions/new">Sign in</a></P>  
+<div>
+<% end %>

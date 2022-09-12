@@ -1,0 +1,88 @@
+body {
+    background-image: url("/images/bg.jpg");
+}
+header {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    display: inline-flex;
+}
+img {
+    width: 60%;
+}
+h1,
+p {
+    color:white;
+}
+.inline {
+    display: inline-flex;
+    gap:0.5rem;
+}
+
+.container {
+    text-align: center;
+}
+a {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color:white;
+    background-color: rgb(39, 39, 39);
+    border-radius: 2rem;
+    cursor: pointer;
+}
+.welcome_container {
+    width: 90%;
+    padding: 0 2rem 4rem 0.5rem;
+    color: white;
+    background-color: rgb(39, 39, 39);
+    border-radius: 2rem;
+}
+form {
+    display: grid;
+    grid-template-rows: auto;
+    gap:0.1rem;
+    width: 90%;
+    margin:0 auto 2rem auto;
+    padding: 0 2rem 4rem 0.5rem;
+    color: white;
+    background-color: rgb(39, 39, 39);
+    border-radius: 2rem;
+}
+.welcome_container form {
+    background-color: none;
+
+}
+span {
+    color: red;
+
+}
+a,
+button {
+    padding:0.5rem 1rem 0.5rem 1rem; 
+    width: 100px;
+    text-decoration: none;
+    background-color: white;
+    color: rgb(39, 39, 39);
+    border-radius: 0.8rem;
+}
+.welcome_container .inline {
+    display: inline-flex;
+    justify-content: space-around;
+}
+.inline form {
+    background-color: none;
+}
+.tips {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+    text-align: center;
+    height: 1.5rem;
+}
+.welcome_container h3 {
+    margin: auto;
+    margin-left: 1rem;
+}
+form button {
+    border: 0;
+}
