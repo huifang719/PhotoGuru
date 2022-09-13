@@ -1,12 +1,17 @@
-<form action="/contact" method="POST">
+<form class="active-form" action="/messages" method="POST">
     <div class="container">
-        <h1>Contact Me</h1>
+        <h1>Contact us</h1>
     </div>
     <div class="inline">
         <span>*</span>
-        <label for="">Name</label>
+        <label for="">first_name</label>
     </div>
-    <input type="text" name="name" required><br>
+    <input type="text" name="first_name" required><br>
+    <div class="inline">
+        <span>*</span>
+        <label for="">last_name</label>
+    </div>
+    <input type="text" name="last_name" required><br>
     <div class="inline">
         <span>*</span>
         <label for="">Email</label>
