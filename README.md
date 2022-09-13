@@ -10,6 +10,7 @@ $ node app.js
 ```
 
 ## :pencil2: Planning & Problem Solving
+### planning
 ![image](https://user-images.githubusercontent.com/112321294/189789223-de6008ea-59fe-44ed-8c42-066dcbbca8c1.png)
 - wireframe for the app
 
