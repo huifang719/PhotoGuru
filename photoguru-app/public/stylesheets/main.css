@@ -28,6 +28,7 @@ p {
     bottom: 0;
 }
 .container {
+    margin: 0 auto;
     text-align: center;
 }
 a {
@@ -40,15 +41,13 @@ a {
 }
 .welcome_container {
     width: 90%;
-    padding: 1rem 2rem 4rem 0.5rem;
+    margin: 0 auto;
+    padding: 1rem 2rem 4rem 0rem;
     color: white;
     background-color: rgb(39, 39, 39);
     border-radius: 2rem;
     text-align: center;
     height: fit-content;
-}
-.welcome_container img {
-    width:100%;
 }
 .welcome_container li {
     text-align: left;
@@ -64,24 +63,15 @@ form {
     color: white;
     background-color: rgb(39, 39, 39);
     border-radius: 2rem;
-}
+} 
 .welcome_container form {
     background-color: none;
-
 }
 span {
     color: red;
 
 }
-a,
-button {
-    padding:0.5rem 1rem 0.5rem 1rem; 
-    width: 100px;
-    text-decoration: none;
-    background-color: white;
-    color: rgb(39, 39, 39);
-    border-radius: 0.8rem;
-}
+
 .welcome_container .inline {
     display: inline-flex;
     justify-content: space-around;
@@ -100,6 +90,13 @@ button {
     margin: auto;
     margin-left: 1rem;
 }
-form button {
-    border: 0;
+
+#btn-style {
+    padding:0.5rem 1rem 0.5rem 1rem; 
+    width: 100px;
+    text-decoration: none;
+    background-color: white;
+    color: rgb(39, 39, 39);
+    border-radius: 0.8rem;
 }
+

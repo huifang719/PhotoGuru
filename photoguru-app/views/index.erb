@@ -9,12 +9,12 @@
                 <option value="">Intermediate</option>
                 <option value="">Pro</option>  
             </select>
-            <button>Submit</button>
+            <button id="btn-style">Submit</button>
         </form>
 <a href="/contact">Contact me</a>
         <form  action="/sessions" method="POST">
             <input type="hidden" name="_method" value="delete">
-            <button>Logout</button>
+            <button id="btn-style">Logout</button>
         </form>
     </div><br>
     <div class="tips"><p id="log"></p></div>
@@ -23,14 +23,14 @@
 <% else %> 
 <div class="welcome_container"> 
     <h3>Welcome,Guest!</h3>
-    <h4>Join our thriving photography Community</h4>
+    <h5>Join our thriving photography Community</h5>
     <li>Online photography tutorials</li>
     <li>Community support and feedback</li>
     <li>Photography Competitions</li>
     <br>
-    <a href="/users/new">Join PhotoGuru</a>
+    <a id="btn-style" href="/users/new">Join PhotoGuru</a>
     <br><br>
-    <P>Already a member? <a href="/sessions/new">Sign in</a></P>  
+    <P>Already a member? <a id="btn-style" href="/sessions/new">Sign in</a></P>  
 <div> 
 <br>
 <% end %>
