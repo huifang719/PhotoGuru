@@ -1,4 +1,20 @@
 <% if logged_in? %>
+<div class="container">
+    <div class="row justify-content-between">
+        <div class="col col-sm-7">
+            <h4 class="text-start">Welcome back, <%= current_user['first_name'] %></h4>
+        </div>
+        <div class="col col-3 text-end">
+            <form  action="/sessions" method="POST">
+                <input type="hidden" name="_method" value="delete">
+                <button>Logout</button>
+            </form>
+        </div>
+    </div>
+    <div class="row text-center">
+        <p id="log"></p>
+    </div>
+</div>
 <div class="welcome_container"> 
     <div class="inline">
         <h3>Welcome back, <%= current_user['first_name'] %></h3>
@@ -11,15 +27,20 @@
             </select>
             <button id="btn-style">Submit</button>
         </form>
-<a href="/contact">Contact me</a>
-        <form  action="/sessions" method="POST">
-            <input type="hidden" name="_method" value="delete">
-            <button id="btn-style">Logout</button>
-        </form>
     </div><br>
     <div class="tips"><p id="log"></p></div>
 </div>
 
+<div class="container text-center">
+  <div class="row">
+    <div class="col col-lg-6 col-sm-10">
+        <h4>Albums</h4>
+    </div>
+    <div class="col col-lg-6 col-sm-10">
+        <h4>Learning</h4>
+    </div>
+  </div>
+</div>
 <% else %> 
 <div class="welcome_container"> 
     <h3>Welcome,Guest!</h3>

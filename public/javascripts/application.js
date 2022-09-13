@@ -11,3 +11,4 @@ let log = [
 setInterval(function () {
     document.querySelector('#log').textContent = log[Math.floor(Math.random()*log.length)] 
 }, 5000);
+
