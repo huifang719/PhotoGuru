@@ -7,6 +7,6 @@
 $ git clone https://github.com/huifang719/PhotoGuru.git
 $ cd photoguru
 $ node app.js
-
+```
 
 ## :pencil2: Planning & Problem Solving
