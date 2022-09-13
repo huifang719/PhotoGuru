@@ -2,6 +2,7 @@ require 'sinatra'
 require 'httparty'
 require 'bcrypt'
 require './db/db'
+require 'dotenv/load'
 
 enable :sessions
 

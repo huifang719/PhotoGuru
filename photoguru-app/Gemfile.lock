@@ -11,6 +11,7 @@ GEM
     bcrypt (3.1.18)
     concurrent-ruby (1.1.10)
     declarative (0.0.20)
+    dotenv (2.8.1)
     faraday (2.5.2)
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
@@ -60,9 +61,12 @@ GEM
     multi_xml (0.6.0)
     mustermann (2.0.2)
       ruby2_keywords (~> 0.0.1)
+    nio4r (2.5.8)
     os (1.1.4)
     pg (1.4.3)
     public_suffix (5.0.0)
+    puma (5.6.5)
+      nio4r (~> 2.0)
     rack (2.2.4)
     rack-protection (2.2.2)
       rack
@@ -96,9 +100,11 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt
+  dotenv
   google-api-client
   httparty
   pg
+  puma
   sinatra
 
 BUNDLED WITH
