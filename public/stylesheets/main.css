@@ -1,9 +1,12 @@
 body {
     background-image: url("/images/bg.jpg");
+    color: white;
 }
 
 h1,
-p {
+p,
+h4 
+h3 {
     color:white;
 }
 .inline {
@@ -102,4 +105,22 @@ img {
     color: rgb(39, 39, 39);
     border-radius: 0.8rem;
     border: 0;
+}
+
+.row h4 {
+    color:white
+}
+
+.image {
+    padding:0; 
+    color: white;
+    text-decoration: none;
+    background:none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+}
+.image:hover {
+    color: rgb(39, 39, 39);
+
 }

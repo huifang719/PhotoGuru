@@ -1,11 +1,42 @@
-<h1>Personal album</h1>
-Start your album by <a href="/images/new">Add images</a>
-
-<div class="container">
+<div container>
+    <div class="row text-center">
+        <h1>Personal album</h1>
+    </div>
+    <div class="row text-center justify-content-even align-items-center">
+        <div class="col col-sm-6 text-center">
+            <h4>Start your album by</h4> 
+        </div>
+        <div class="col col-sm-2">
+            <a class="album" href="/images/new">Add images</a>
+        </div>  
+</div>
 <% images.each do |image| %>
-<h3><%= image['title'] %> </h3>
- <img src="<%= image['image_url'] %>" alt="">
- <h3><%= image['author'] %></h3>
- <p><%= image['description'] %></p>
+<div class="container">
+    <div class="col col-sm-12 col-md-6 col-lg-4">
+        <div class="row justify-content-even align-items-center">
+            <div class="col col-6 text-center">
+                <h4><%= image['title'] %></h4>
+            </div>
+            <div class="col col-2 text-center">
+                <a class="image" href="/images/<%= image['id'] %>/edit">Edit</a>
+            </div>
+            <div class="col col-2 text-center">
+                <form action="/images/<%= image['id'] %>" method="POST">
+                    <input type="hidden" name="_method" value="delete">
+                    <button class="image">Delete</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <img src="<%= image['img_url'] %>" alt="">
+        </div>
+        <div class="row"></div>
+            <div class="col col-5 text-left">
+                <h4><%= image['author'] %></h4>
+            </div>
+            <div class="col col-6 text-center">
+                <p><%= image['img_description'] %></p>
+            </div>
+    </div>
 </div>
 <% end %>

@@ -1,0 +1,13 @@
+<h1>update food</h1>
+<form action="/images/<%= image['id'] %>" method="POST">
+<input type="hidden" name="_method" value="put">
+<label for="">Image Title</label>
+<input type="text" name="title" value=<% image['title']%>>
+<label for="">Image URL</label>
+<input type="text" name="image_url" value="<%= food['img_url'] %>">
+<label for="">Author</label>
+<input type="text" name="author" value=<% image['author']%>>
+<label for="">Description</label>
+<input type="textarea" name="" value=<% image['img_description']%>>
+<button>Update image</button>
+</form>
