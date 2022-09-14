@@ -5,7 +5,15 @@ end
 def get_image(id)
     image = run_sql("SELECT * FROM image_album WHERE id = $1",[id])[0]
 end 
+def update_image(id, title,image_url,author,description)
+    run_sql("UPDATE image_album SET title = $2, img_url = $3, author = $4, img_description = $5 WHERE id =$1",[id, title,image_url,author,description])
+end 
 
 def delete_image(id)
     run_sql("DELETE FROM image_album WHERE id= $1",[id])
 end 
+
+def all_images()
+    run_sql("SELECT * FROM image_album")
+end 
+

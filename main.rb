@@ -15,7 +15,10 @@ require './controllers/images_controller'
 
 
 get '/' do
-  erb :index
+  images = all_images()
+  erb :'index', locals: {
+    images: images
+  }
 end
 
 get '/contact' do
@@ -25,4 +28,8 @@ end
 get '/about' do
   erb :about
 end 
+
+get '/tutorials/new' do
+  erb :'tutorials/new'
+end
 

@@ -21,7 +21,17 @@ get '/images/:id/edit' do
         image: image
     }
 end
-
+put '/images/:id' do 
+    id = params['id']
+    title = params['title']
+    image_url = params['image_url']
+    author = params['author']
+    description = params['description']
+  
+    update_image(id,title,image_url,author,description)
+    
+    redirect '/albums/new'
+  end 
 
 delete '/images/:id' do
     id = params['id']
