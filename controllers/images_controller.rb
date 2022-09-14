@@ -17,7 +17,7 @@ end
 get '/images/:id/edit' do
     id = params['id']
     image = get_image(id)
-    erb :'image/edit', locals: {
+    erb :'images/edit', locals: {
         image: image
     }
 end

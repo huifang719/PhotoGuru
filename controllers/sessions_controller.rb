@@ -11,7 +11,10 @@ get '/sessions' do
   if user && BCrypt::Password.new(user['password_digest']) == password
   session['user_id'] = user['id']
 
-  redirect '/'
+    redirect '/'
+  else 
+    session['user_id'] = nil
+    redirect '/'
   end 
 end
 
