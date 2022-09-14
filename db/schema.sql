@@ -22,10 +22,12 @@ CREATE TABLE message_bank(
   msg TEXT
 );
 
-CREATE TABLE personal_album(
+CREATE TABLE Image_album(
   id SERIAL PRIMARY KEY,
   title TEXT, 
-  img_description TEXT,
-  author TEXT,
+ 
   img_url TEXT
+  author TEXT,
+  img_description TEXT,
 );
+
