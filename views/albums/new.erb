@@ -7,7 +7,7 @@
             <h4>Start your album by</h4> 
         </div>
         <div class="col col-sm-2">
-            <a class="album" href="/images/new">Add images</a>
+            <a id="member" href="/images/new">Add images</a>
         </div>  
 </div>
 <% images.each do |image| %>
@@ -18,12 +18,12 @@
                 <h4><%= image['title'] %></h4>
             </div>
             <div class="col col-2 text-center">
-                <a class="image" href="/images/<%= image['id'] %>/edit">Edit</a>
+                <a id="member" href="/images/<%= image['id'] %>/edit">Edit</a>
             </div>
             <div class="col col-2 text-center">
                 <form action="/images/<%= image['id'] %>" method="POST">
                     <input type="hidden" name="_method" value="delete">
-                    <button class="image">Delete</button>
+                    <button id="member">Delete</button>
                 </form>
             </div>
         </div>

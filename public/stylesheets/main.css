@@ -97,30 +97,22 @@ img {
     padding: 0;
     margin: 0;
 }
-.album {
-    padding:0.5rem 1rem 0.5rem 1rem; 
-    width: 100px;
-    text-decoration: none;
-    background-color: white;
-    color: rgb(39, 39, 39);
-    border-radius: 0.8rem;
-    border: 0;
-}
 
 .row h4 {
     color:white
 }
 
-.image {
-    padding:0; 
-    color: white;
+#member {
+    padding:0.2rem 0.5rem 0.2rem 0.5rem;
+    width:5rem; 
+    font-size: 0.8rem;
     text-decoration: none;
-    background:none;
-    border-radius: none;
-    border: none;
-    cursor: pointer;
+    background-color: white;
+    color: rgb(39, 39, 39);
+    border-radius: 0.2rem;
+    border: 0;
 }
-.image:hover {
+.member:hover {
     color: rgb(39, 39, 39);
 
 }
@@ -134,4 +126,20 @@ img {
 .about {
     padding-top: 2rem;
     padding-bottom: 4rem;
+}
+
+#log {
+    width: 90%;
+    margin: 1rem auto 1rem auto;
+    border:1px solid white
+}
+
+.nav-link {
+    color: white !important;
+}
+.navbar-toggler,
+.navbar-toggler-icon,
+.container-fluid button {
+    color: darkgrey!important;
+    border: rgb(255, 255, 255);   
 }
