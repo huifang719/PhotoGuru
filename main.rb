@@ -11,6 +11,7 @@ require './controllers/sessions_controller'
 require './controllers/albums_controller'
 require './helpers/sessions_helper'
 require './controllers/messages_controller'
+require './controllers/images_controller'
 
 
 get '/' do

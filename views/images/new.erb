@@ -1,0 +1,29 @@
+<form class="active-form" action="/images" method="POST">
+    <div class="container">
+        <h1>Add image</h1>
+    </div>
+    <div class="inline">
+        <span>*</span>
+        <label for="">Image Title</label>
+    </div>
+    <input type="text" name="title" required><br>
+    <div class="inline">
+        <span>*</span>
+        <label for="">Image URL</label>
+    </div>
+    <input type="text" name="image_url" required><br>
+    <div class="inline">
+        <span>*</span>
+        <label for="">Author</label>
+    </div>
+    <input type="text" name="author" required><br>
+    
+    <label for="">Description</label>
+    <textarea name="description" cols="30" rows="6"></textarea>
+    </div><br>
+    <div class="inline">
+        <input type="checkbox" name="public">
+        <p>Would you like to go public for this image</p>
+    </div>
+    <button id="btn-style">Add</button>
+</form>

@@ -10,7 +10,7 @@ p {
     display: inline-flex;
     gap:0.5rem;
 }
-.footer {
+footer {
     text-align: center;
     position: fixed;
     bottom: 0;
