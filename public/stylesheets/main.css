@@ -124,3 +124,14 @@ img {
     color: rgb(39, 39, 39);
 
 }
+#page_footer {
+    position: fixed;
+    height: 3rem;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+.about {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
