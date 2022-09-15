@@ -9,5 +9,8 @@ get '/users' do
   password = params['password']
   newsletter = params['newsletter']
   create_user(first_name, last_name, email, password)
+  if newsletter == '1'
+     add_to_email_list(first_name,email) 
+  end 
   redirect '/sessions/new'
 end
