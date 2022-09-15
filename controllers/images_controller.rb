@@ -5,7 +5,7 @@ end
 post '/images' do
     title = params['title']
     image_url = params['image_url']
-    image_owner = ['user_id']
+    image_owner = session['user_id']
     author = params['author']
     description = params['description']
     
