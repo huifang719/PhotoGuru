@@ -2,8 +2,8 @@ require './models/image.rb'
 
 
 get '/albums/new' do
- 
-  images = all_images()
+  uploader = session['user_id']
+  images = all_images(uploader)
   
   erb :'albums/new', locals: {
     images: images

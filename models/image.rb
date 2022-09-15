@@ -13,7 +13,7 @@ def delete_image(id)
     run_sql("DELETE FROM image_album WHERE id= $1",[id])
 end 
 
-def all_images()
-    run_sql("SELECT * FROM image_album")
+def all_images(uploader)
+    run_sql("SELECT * FROM image_album WHERE image_owner= $1",[uploader])
 end 
 

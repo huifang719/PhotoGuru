@@ -15,7 +15,8 @@ require './controllers/images_controller'
 
 
 get '/' do
-  images = all_images()
+  uploader = session['user_id']
+  images = all_images(uploader)
   erb :'index', locals: {
     images: images
   }
