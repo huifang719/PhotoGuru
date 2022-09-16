@@ -17,3 +17,10 @@ def all_images(uploader)
     run_sql("SELECT * FROM image_album WHERE image_owner= $1",[uploader])
 end 
 
+def add_image_to_public(title,image_url,author,description)
+    run_sql("INSERT INTO public_album(title, img_url,author,img_description) VALUES($1, $2, $3, $4)", [title, image_url,author,description])
+end 
+
+def delete_image_in_public(id) 
+    run_sql("DELETE FROM public_album WHERE id= $1",[id])
+end 

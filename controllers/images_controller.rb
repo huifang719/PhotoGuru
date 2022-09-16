@@ -8,10 +8,16 @@ post '/images' do
     image_owner = session['user_id']
     author = params['author']
     description = params['description']
+    go_public = params['go_public']
+    if go_public == '1'
+        add_image(title,image_url,image_owner,author,description)
+        add_image_to_public(title,image_url,author,description)
+        redirect '/albums/new'
+    else
+        add_image(title,image_url,image_owner,author,description)
+        redirect '/albums/new'
+    end 
     
-    add_image(title,image_url,image_owner,author,description)
-
-    redirect '/albums/new'
 end
 
 get '/images/:id/edit' do
@@ -31,10 +37,12 @@ put '/images/:id' do
     update_image(id,title,image_url,author,description)
     
     redirect '/albums/new'
-  end 
+end 
 
 delete '/images/:id' do
     id = params['id']
     delete_image(id)
     redirect '/albums/new'
 end
+
+

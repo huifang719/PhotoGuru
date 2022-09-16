@@ -31,3 +31,10 @@ CREATE TABLE image_album(
   img_description TEXT
 );
 
+CREATE TABLE public_album(
+  id SERIAL PRIMARY KEY,
+  title TEXT, 
+  img_url TEXT,
+  author TEXT,
+  img_description TEXT
+);
