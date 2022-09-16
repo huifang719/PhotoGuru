@@ -21,3 +21,13 @@ end
 def add_to_email_list(first_name,email)
     run_sql("INSERT INTO email_list(first_name, email) VALUES($1, $2)", [first_name, email])
 end
+ 
+def find_existing_email(email)
+    
+    users = run_sql("SELECT * FROM users WHERE email = $1", [email])
+    if users.to_a.count> 0
+        existing_email = true 
+    else 
+        existing_email = false 
+    end 
+end 
