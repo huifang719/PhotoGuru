@@ -1,3 +1,22 @@
+<% if user == nil %>
+<form class="active-form" action="/sessions">
+    <div class="container">
+        <h1>Sign in</h1>
+    </div>
+    <div class="inline">
+        <span>*</span>
+        <label for="">Email</label>
+    </div>
+    <input type="email" name="email" required><br>
+    <div class="inline">
+        <span>*</span>
+        <label for="">Password</label>
+    </div>
+    <input type="password" name="password" required><br>
+    <button id="btn-style">Submit</button>
+    <strong>Incorrect email or password</strong>
+</form>
+<% else %>
 <form class="active-form" action="/sessions">
     <div class="container">
         <h1>Sign in</h1>
@@ -14,3 +33,4 @@
     <input type="password" name="password" required><br>
     <button id="btn-style">Submit</button>
 </form>
+<% end %>

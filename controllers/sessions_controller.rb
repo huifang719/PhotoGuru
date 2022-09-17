@@ -1,5 +1,9 @@
 get '/sessions/new' do
-  erb :'/sessions/new'
+  email = params['email']
+  user = find_user_by_email(email)
+  erb :'sessions/new', locals: {
+    user:user
+  }
 end
 
 get '/sessions' do
@@ -7,14 +11,14 @@ get '/sessions' do
   password = params['password']
 
   user = find_user_by_email(email)
-
   if user && BCrypt::Password.new(user['password_digest']) == password
   session['user_id'] = user['id']
 
     redirect '/'
   else 
-    session['user_id'] = nil
-    redirect '/'
+    erb :'sessions/new', locals: {
+      user:user
+    }
   end 
 end
 

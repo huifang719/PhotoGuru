@@ -1,6 +1,10 @@
 require './models/user.rb'
 get '/users/new' do
-  erb :'users/new'
+  email = params['email'] 
+  existing_email = find_existing_email(email)
+  erb :'users/new', locals: {
+    existing_email: existing_email
+  }
 end
 get '/users' do
   first_name = params['first_name']
@@ -18,7 +22,8 @@ get '/users' do
     end 
     redirect '/sessions/new'
   else 
-    #can i do alert here? 
-    redirect '/users/new'
+    erb :'users/new', locals: {
+      existing_email: existing_email
+    }
   end
 end 
