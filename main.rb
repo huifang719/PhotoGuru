@@ -12,6 +12,7 @@ require './controllers/albums_controller'
 require './helpers/sessions_helper'
 require './controllers/messages_controller'
 require './controllers/images_controller'
+require './controllers/tutorials_controller'
 
 
 get '/' do
@@ -30,7 +31,4 @@ get '/about' do
   erb :about
 end 
 
-get '/tutorials/new' do
-  erb :'tutorials/new'
-end
 
